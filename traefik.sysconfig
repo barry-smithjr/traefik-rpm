@@ -1,0 +1,7 @@
+# /etc/sysconfig/traefik
+
+# set this to use a deterministic id for this host
+TRAEFIK_CONFIG=/etc/traefik/traefik.toml
+
+# add any extra command line options to pass the traefik binary
+EXTRA_OPTS=

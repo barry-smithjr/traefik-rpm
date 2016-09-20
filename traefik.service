@@ -1,0 +1,15 @@
+[Unit]
+Description=Træfɪk, a modern reverse proxy
+Documentation=https://docs.traefik.io/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=traefik
+EnvironmentFile=-/etc/sysconfig/traefik
+ExecStart=/usr/bin/traefik --configfile ${TRAEFIK_CONFIG} ${EXTRA_OPTS}
+TimeoutStopSec=5s
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
