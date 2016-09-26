@@ -7,7 +7,7 @@ Wants=network-online.target
 [Service]
 User=traefik
 EnvironmentFile=-/etc/sysconfig/traefik
-ExecStart=/usr/bin/traefik --configfile ${TRAEFIK_CONFIG} ${EXTRA_OPTS}
+ExecStart=/usr/bin/traefik --configfile=${TRAEFIK_CONFIG} ${EXTRA_OPTS}
 TimeoutStopSec=5s
 KillSignal=SIGINT
 
