@@ -2,7 +2,7 @@
 
 Name:           traefik
 Version:        1.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Træfɪk, a modern reverse proxy
 ExclusiveArch:  x86_64
 
@@ -69,6 +69,9 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Mon Sep 26 2016 Arun Babu Neelicattu <arun.neelicattu@gmail.com> - 1.0.2-2
+- fix service syntax for configfile flag in systemd unit
+
 * Tue Sep 20 2016 Arun Babu Neelicattu <arun.neelicattu@gmail.com> - 1.0.2-1
 - initial version: v1.0.2
 
