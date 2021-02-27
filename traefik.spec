@@ -29,6 +29,8 @@ Pointing Traefik at your orchestrator should be the only configuration step you 
 
 %prep
 
+%setup
+
 %build
 
 %install
