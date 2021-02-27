@@ -9,7 +9,7 @@ ExclusiveArch:  x86_64
 Group:          System Environment/Daemons
 License:        MIT
 URL:            https://traefik.io/
-Source0:        https://github.com/traefik/traefik/releases/download/v%{version}/traefik_linux-amd64.tar.gz
+Source0:        https://github.com/traefik/traefik/releases/download/v%{version}/traefik_v%{version}_linux-amd64.tar.gz
 Source1:        traefik.service
 Source2:        traefik.sysconfig
 Source3:        https://github.com/traefik/traefik/raw/v%{version}/traefik.sample.toml
