@@ -1,18 +1,18 @@
 %define debug_package %{nil}
 
 Name:           traefik
-Version:        1.5.4
+Version:        2.4.5
 Release:        1%{?dist}
-Summary:        Træfɪk, a modern reverse proxy
+Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
 
 Group:          System Environment/Daemons
 License:        MIT
 URL:            https://traefik.io/
-Source0:        https://github.com/containous/traefik/releases/download/v%{version}/traefik_linux-amd64
+Source0:        https://github.com/traefik/traefik/releases/download/v%{version}/traefik_linux-amd64.tar.gz
 Source1:        traefik.service
 Source2:        traefik.sysconfig
-Source3:        https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml
+Source3:        https://github.com/traefik/traefik/raw/v%{version}/traefik.sample.toml
 Source4:        LICENSE
 
 BuildRequires:  systemd-units
@@ -21,20 +21,21 @@ Requires(pre):  shadow-utils
 Requires:       systemd glibc
 
 %description
-Træfɪk is a modern HTTP reverse proxy and load balancer made to deploy
-microservices with ease. It supports several backends (Docker, Swarm,
-Mesos/Marathon, Consul, Etcd, Zookeeper, BoltDB, Rest API, file...) to manage
-its configuration automatically and dynamically.
+Traefik (pronounced traffic) is a modern HTTP reverse proxy and load balancer
+that makes deploying microservices easy. Traefik integrates with your existing 
+infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, 
+Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. 
+Pointing Traefik at your orchestrator should be the only configuration step you need.
 
 %prep
 
 %build
 
 %install
-install -D %{SOURCE0} %{buildroot}/%{_bindir}/traefik
+install -D %{name} %{buildroot}/%{_bindir}/%{name}
 install -D %{SOURCE1} %{buildroot}/%{_unitdir}/%{name}.service
 install -D %{SOURCE2} %{buildroot}/%{_sysconfdir}/sysconfig/%{name}
-install -D %{SOURCE3} %{buildroot}/%{_sysconfdir}/%{name}/traefik.toml
+install -D %{SOURCE3} %{buildroot}/%{_sysconfdir}/%{name}/%{name}.toml
 install -D %{SOURCE4} %{buildroot}/%{_docdir}/%{name}/LICENSE
 
 %pre
@@ -77,6 +78,10 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Sat Feb 27 2021 Diftraku <diftraku@gmail.com> - 2.4.5-1
+- update to v2.4.5
+- use tarballed distribution
+
 * Wed Apr 25 2018 Arun Babu Neelicattu <arun.neelicattu@gmail.com> - 1.5.4-1
 - update to v1.5.4
 - ensure user and group are deleted only for uninstallations
