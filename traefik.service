@@ -10,6 +10,7 @@ EnvironmentFile=-/etc/sysconfig/traefik
 ExecStart=/usr/bin/traefik --configfile=${TRAEFIK_CONFIG} ${EXTRA_OPTS}
 TimeoutStopSec=5s
 KillSignal=SIGINT
+AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 [Install]
 WantedBy=multi-user.target
