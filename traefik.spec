@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           traefik
-Version:        2.4.8
+Version:        2.5.6
 Release:        1%{?dist}
 Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
@@ -80,6 +80,9 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Sat Dec 24 2021 Diftraku <diftraku@gmail.com> - 2.5.6-1
+- update to v2.5.6
+
 * Sat Apr 28 2021 Diftraku <diftraku@gmail.com> - 2.4.8-1
 - update to v2.4.8
 
