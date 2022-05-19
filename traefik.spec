@@ -89,7 +89,7 @@ rm -rf %{buildroot}
 * Fri Dec 24 2021 Diftraku <diftraku@gmail.com> - 2.5.6-1
 - update to v2.5.6
 
-* Sun Apr 28 2021 Diftraku <diftraku@gmail.com> - 2.4.8-1
+* Wed Apr 28 2021 Diftraku <diftraku@gmail.com> - 2.4.8-1
 - update to v2.4.8
 
 * Sat Feb 27 2021 Diftraku <diftraku@gmail.com> - 2.4.5-1
