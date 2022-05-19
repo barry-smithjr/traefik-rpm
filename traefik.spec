@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:           traefik
-Version:        2.5.6
-Release:        2%{?dist}
+Version:        2.6.6
+Release:        1%{?dist}
 Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
 
@@ -80,6 +80,9 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Thu May 19 2022 Diftraku <diftraku@gmail.com> - 2.6.6-1
+- Update to v2.6.6
+
 * Fri Dec 24 2021 Diftraku <diftraku@gmail.com> - 2.5.6-2
 - Add AmbientCapabilities to systemd unit
 
