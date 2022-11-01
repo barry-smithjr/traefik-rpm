@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           traefik
-Version:        2.6.6
+Version:        2.9.4
 Release:        1%{?dist}
 Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
