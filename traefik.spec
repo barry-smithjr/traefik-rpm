@@ -83,7 +83,6 @@ rm -rf %{buildroot}
 * Sun Jul 09 2023 Diftraku <diftraku@gmail.com> - 2.10.3-1
 - Update to v2.10.3
 
-%changelog
 * Thu May 19 2022 Diftraku <diftraku@gmail.com> - 2.6.6-1
 - Update to v2.6.6
 
