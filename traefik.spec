@@ -80,7 +80,7 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
-* Sun Jan 25 2024 barry-smithjr <barry-smithjr@gmail.com> - 2.10.7-1
+* Thu Jan 25 2024 barry-smithjr <barry-smithjr@gmail.com> - 2.10.7-1
 - Update to v2.10.7
 - Switch to yaml
 
