@@ -2,7 +2,7 @@
 
 Name:           traefik
 Version:        2.10.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
 
@@ -37,7 +37,7 @@ Pointing Traefik at your orchestrator should be the only configuration step you 
 install -D %{name} %{buildroot}/%{_bindir}/%{name}
 install -D %{SOURCE1} %{buildroot}/%{_unitdir}/%{name}.service
 install -D %{SOURCE2} %{buildroot}/%{_sysconfdir}/sysconfig/%{name}
-install -D %{SOURCE3} %{buildroot}/%{_sysconfdir}/%{name}/%{name}.toml
+install -D %{SOURCE3} %{buildroot}/%{_sysconfdir}/%{name}/%{name}.yml
 install -D %{SOURCE4} %{buildroot}/%{_docdir}/%{name}/LICENSE
 
 %pre
@@ -75,11 +75,14 @@ rm -rf %{buildroot}
 %dir %attr(750, root, %{name}) %{_sysconfdir}/%{name}
 %attr(644, root, root) %{_unitdir}/%{name}.service
 %config(noreplace) %attr(640, root, %{name}) %{_sysconfdir}/sysconfig/%{name}
-%config(noreplace) %attr(640, root, %{name}) %{_sysconfdir}/%{name}/traefik.toml
+%config(noreplace) %attr(640, root, %{name}) %{_sysconfdir}/%{name}/traefik.yml
 
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Thu Jan 25 2024 barry-smithjr <barry-smithjr@gmail.com> - 2.10.7-2
+- Update basic config
+
 * Thu Jan 25 2024 barry-smithjr <barry-smithjr@gmail.com> - 2.10.7-1
 - Update to v2.10.7
 - Switch to yaml
