@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           traefik
-Version:        2.10.3
+Version:        2.10.7
 Release:        1%{?dist}
 Summary:        The Cloud Native Application Proxy
 ExclusiveArch:  x86_64
@@ -12,7 +12,7 @@ URL:            https://traefik.io/
 Source0:        https://github.com/traefik/traefik/releases/download/v%{version}/traefik_v%{version}_linux_amd64.tar.gz
 Source1:        traefik.service
 Source2:        traefik.sysconfig
-Source3:        https://github.com/traefik/traefik/raw/v%{version}/traefik.sample.toml
+Source3:        https://github.com/traefik/traefik/raw/v%{version}/traefik.sample.yaml
 Source4:        LICENSE
 
 BuildRequires:  systemd-units
@@ -80,6 +80,10 @@ rm -rf %{buildroot}
 %doc %{_docdir}/%{name}/LICENSE
 
 %changelog
+* Sun Jan 25 2024 barry-smithjr <barry-smithjr@gmail.com> - 2.10.7-1
+- Update to v2.10.7
+- Switch to yaml
+
 * Sun Jul 09 2023 Diftraku <diftraku@gmail.com> - 2.10.3-1
 - Update to v2.10.3
 
