@@ -12,7 +12,7 @@ URL:            https://traefik.io/
 Source0:        https://github.com/traefik/traefik/releases/download/v%{version}/traefik_v%{version}_linux_amd64.tar.gz
 Source1:        traefik.service
 Source2:        traefik.sysconfig
-Source3:        https://github.com/traefik/traefik/raw/v%{version}/traefik.sample.yaml
+Source3:        https://raw.githubusercontent.com/traefik/traefik/v%{version}/traefik.sample.yml
 Source4:        LICENSE
 
 BuildRequires:  systemd-units
